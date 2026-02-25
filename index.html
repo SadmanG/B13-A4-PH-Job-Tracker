@@ -27,12 +27,12 @@
             <!-- Interview Card -->
             <div class="card bg-white shadow-md p-6 rounded-lg">
                 <p class="text-sm font-medium text-gray-500">Interview</p>
-                <p class="text-3xl font-bold text-green-500">0</p>
+                <p id="int-count" class="text-3xl font-bold text-green-500">0</p>
             </div>
             <!-- Rejected Card -->
             <div class="card bg-white shadow-md p-6 rounded-lg">
                 <p class="text-sm font-medium text-gray-500">Rejected</p>
-                <p class="text-3xl font-bold text-red-500">0</p>
+                <p id="rej-count" class="text-3xl font-bold text-red-500">0</p>
             </div>
         </div>
 
@@ -45,13 +45,13 @@
 
             <!-- Filter Buttons -->
             <div class="flex space-x-4 mb-6">
-                <button class="btn btn-primary btn-sm">All</button>
-                <button class="btn btn-outline btn-sm">Interview</button>
-                <button class="btn btn-outline btn-sm">Rejected</button>
+                <button onclick="showOnly('all-container')" class="btn btn-primary btn-sm">All</button>
+                <button onclick="showOnly('interview-container')" class="btn btn-outline btn-sm">Interview</button>
+                <button onclick="showOnly('rejected-container')" class="btn btn-outline btn-sm">Rejected</button>
             </div>
 
             <!-- Job Cards -->
-        <div>
+        <div id="all-container">
             <div id="MFC" class="border border-gray-200 p-6 rounded-lg shadow-sm mb-4">
                 <div class="flex justify-between items-start">
                     <div>
@@ -73,8 +73,8 @@
                 </p>
 
                 <div class="flex space-x-4 mt-6">
-                    <button class="btn btn-success btn-outline btn-sm">INTERVIEW</button>
-                    <button class="btn btn-error btn-outline btn-sm">REJECTED</button>
+                    <button id="MFC-int" class="btn btn-success btn-outline btn-sm">INTERVIEW</button>
+                    <button id="MFC-rej" class="btn btn-error btn-outline btn-sm">REJECTED</button>
                 </div>
             </div>
             <div id="WFA" class="border border-gray-200 p-6 rounded-lg shadow-sm mb-4">
@@ -98,8 +98,8 @@
                 </p>
 
                 <div class="flex space-x-4 mt-6">
-                    <button class="btn btn-success btn-outline btn-sm">INTERVIEW</button>
-                    <button class="btn btn-error btn-outline btn-sm">REJECTED</button>
+                    <button id="WFA-int" class="btn btn-success btn-outline btn-sm">INTERVIEW</button>
+                    <button id="WFA-rej" class="btn btn-error btn-outline btn-sm">REJECTED</button>
                 </div>
             </div>
             <div id="DVS" class="border border-gray-200 p-6 rounded-lg shadow-sm mb-4">
@@ -123,8 +123,8 @@
                 </p>
 
                 <div class="flex space-x-4 mt-6">
-                    <button class="btn btn-success btn-outline btn-sm">INTERVIEW</button>
-                    <button class="btn btn-error btn-outline btn-sm">REJECTED</button>
+                    <button id="DVS-int" class="btn btn-success btn-outline btn-sm">INTERVIEW</button>
+                    <button id="DVS-rej" class="btn btn-error btn-outline btn-sm">REJECTED</button>
                 </div>
             </div>
             <div id="CFI" class="border border-gray-200 p-6 rounded-lg shadow-sm mb-4">
@@ -253,8 +253,12 @@
                 </div>
             </div>
         </div>
+        <div id="interview-container" class="hidden"></div>
+        <div id="rejected-container" class="hidden"></div>
         </div>
     </div>
-    <script src="script/app.js"></script>
+    <script src="script/machine.js"></script>
+    <script src="script/interview.js"></script>
+    <script src="script/rejected.js"></script>
 </body>
 </html>
