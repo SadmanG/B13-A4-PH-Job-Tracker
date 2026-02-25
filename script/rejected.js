@@ -126,3 +126,175 @@ document.getElementById("DVS-rej").addEventListener("click", function(){
         const dvs = document.getElementById("DVS");
         dvs.classList.add("hidden");
 })
+
+document.getElementById("CFI-rej").addEventListener("click", function(){
+    // 1. rejected-container ke dhore niye ashbo
+        const rejected = document.getElementById("rejected-container");
+
+        // 2. New div create korbo
+        const newRejected = document.createElement("div");
+
+        // 3. New div innerHTML add korbo
+        newRejected.innerHTML = `
+        <div id="CFI" class="border border-gray-200 p-6 rounded-lg shadow-sm mb-4">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800">CloudFirst Inc</h3>
+                        <p class="text-gray-600">Backend Developer</p>
+                        <p class="text-sm text-gray-500 mt-1">Seattle, WA  •  Full-time  •  $140,000 - $190,000</p>
+                    </div>
+                    <button class="text-gray-400 hover:text-gray-600">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+                
+                <div class="mt-4">
+                    <span class="badge badge-error text-xs">REJECTED</span>
+                </div>
+
+                <p class="text-gray-600 mt-4">
+                    Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.
+                </p>
+
+                <div class="flex space-x-4 mt-6">
+                    <button id="CFI-int" class="btn btn-success btn-outline btn-sm">INTERVIEW</button>
+                    <button id="CFI-rej" class="btn btn-error btn-outline btn-sm">REJECTED</button>
+                </div>
+            </div>
+        `;
+        // 4. Rejected container e newDiv append korbo
+        rejected.append(newRejected);
+
+        // 5. Hide "all" card
+        const cfi = document.getElementById("CFI");
+        cfi.classList.add("hidden");
+})
+
+document.getElementById("IL-rej").addEventListener("click", function(){
+    // 1. rejected-container ke dhore niye ashbo
+        const rejected = document.getElementById("rejected-container");
+
+        // 2. New div create korbo
+        const newRejected = document.createElement("div");
+
+        // 3. New div innerHTML add korbo
+        newRejected.innerHTML = `
+        <div id="IL" class="border border-gray-200 p-6 rounded-lg shadow-sm mb-4">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800">Innovation Labs</h3>
+                        <p class="text-gray-600">UI/UX Engineer</p>
+                        <p class="text-sm text-gray-500 mt-1">Austin, TX  •  Full-time  •  $110,000 - $150,000</p>
+                    </div>
+                    <button class="text-gray-400 hover:text-gray-600">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+                
+                <div class="mt-4">
+                    <span class="badge badge-error text-xs">REJECTED</span>
+                </div>
+
+                <p class="text-gray-600 mt-4">
+                    Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.
+                </p>
+
+                <div class="flex space-x-4 mt-6">
+                    <button id="IL-int" class="btn btn-success btn-outline btn-sm">INTERVIEW</button>
+                    <button id="IL-rej" class="btn btn-error btn-outline btn-sm">REJECTED</button>
+                </div>
+            </div>
+        `;
+        // 4. Rejected container e newDiv append korbo
+        rejected.append(newRejected);
+
+        // 5. Hide "all" card
+        const il = document.getElementById("IL");
+        il.classList.add("hidden");
+})
+
+document.getElementById("MCS-rej").addEventListener("click", function(){
+    // 1. rejected-container ke dhore niye ashbo
+        const rejected = document.getElementById("rejected-container");
+
+        // 2. New div create korbo
+        const newRejected = document.createElement("div");
+
+        // 3. New div innerHTML add korbo
+        newRejected.innerHTML = `
+        <div id="MCS" class="border border-gray-200 p-6 rounded-lg shadow-sm mb-4">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800">MegaCorp Solutions</h3>
+                        <p class="text-gray-600">JavaScript Developer</p>
+                        <p class="text-sm text-gray-500 mt-1">New York, NY  •  Full-time  •  $130,000 - $170,00</p>
+                    </div>
+                    <button class="text-gray-400 hover:text-gray-600">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+                
+                <div class="mt-4">
+                    <span class="badge badge-error text-xs">REJECTED</span>
+                </div>
+
+                <p class="text-gray-600 mt-4">
+                    Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.
+                </p>
+
+                <div class="flex space-x-4 mt-6">
+                    <button id="MCS-int" class="btn btn-success btn-outline btn-sm">INTERVIEW</button>
+                    <button id="MCS-rej" class="btn btn-error btn-outline btn-sm">REJECTED</button>
+                </div>
+            </div>
+        `;
+        // 4. Rejected container e newDiv append korbo
+        rejected.append(newRejected);
+
+        // 5. Hide "all" card
+        const mcs = document.getElementById("MCS");
+        mcs.classList.add("hidden");
+})
+
+document.getElementById("SXYZ-rej").addEventListener("click", function(){
+    // 1. rejected-container ke dhore niye ashbo
+        const rejected = document.getElementById("rejected-container");
+
+        // 2. New div create korbo
+        const newRejected = document.createElement("div");
+
+        // 3. New div innerHTML add korbo
+        newRejected.innerHTML = `
+        <div id="SXYZ" class="border border-gray-200 p-6 rounded-lg shadow-sm mb-4">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800">StartupXYZ</h3>
+                        <p class="text-gray-600">Full Stack Engineer</p>
+                        <p class="text-sm text-gray-500 mt-1">Remote  •  Full-time  •  $120,000 - $160,000</p>
+                    </div>
+                    <button class="text-gray-400 hover:text-gray-600">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+                
+                <div class="mt-4">
+                    <span class="badge badge-error text-xs">REJECTED</span>
+                </div>
+
+                <p class="text-gray-600 mt-4">
+                    Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.
+                </p>
+
+                <div class="flex space-x-4 mt-6">
+                    <button id="SXYZ-int" class="btn btn-success btn-outline btn-sm">INTERVIEW</button>
+                    <button id="SXYZ-rej" class="btn btn-error btn-outline btn-sm">REJECTED</button>
+                </div>
+            </div>
+        `;
+        // 4. Rejected container e newDiv append korbo
+        rejected.append(newRejected);
+
+        // 5. Hide "all" card
+        const sxyz = document.getElementById("SXYZ");
+        sxyz.classList.add("hidden");
+})
