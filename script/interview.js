@@ -298,3 +298,46 @@ document.getElementById("SXYZ-int").addEventListener("click", function(){
         const sxyz = document.getElementById("SXYZ");
         sxyz.classList.add("hidden");
 })
+
+document.getElementById("TCI-int").addEventListener("click", function(){
+    // 1. interview-container ke dhore niye ashbo
+        const interview = document.getElementById("interview-container");
+
+        // 2. New div create korbo
+        const newInterview = document.createElement("div");
+
+        // 3. New div innerHTML add korbo
+        newInterview.innerHTML = `
+        <div id="TCI" class="border border-gray-200 p-6 rounded-lg shadow-sm mb-4">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800">TechCorp Industries</h3>
+                        <p class="text-gray-600">Senior Frontend Developer</p>
+                        <p class="text-sm text-gray-500 mt-1">San Francisco, CA  •  Full-time  •  $130,000 - $175,000</p>
+                    </div>
+                    <button class="text-gray-400 hover:text-gray-600">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+                
+                <div class="mt-4">
+                    <span class="badge badge-success text-xs">INTERVIEW</span>
+                </div>
+
+                <p class="text-gray-600 mt-4">
+                    We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.
+                </p>
+
+                <div class="flex space-x-4 mt-6">
+                    <button id="TCI-int" class="btn btn-success btn-outline btn-sm">INTERVIEW</button>
+                    <button id="TCI-rej" class="btn btn-error btn-outline btn-sm">REJECTED</button>
+                </div>
+            </div>
+        `;
+        // 4. Interview container e newDiv append korbo
+        interview.append(newInterview);
+
+        // 5. Hide "all" card
+        const tci = document.getElementById("TCI");
+        tci.classList.add("hidden");
+})
